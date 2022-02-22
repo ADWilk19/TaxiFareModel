@@ -12,6 +12,7 @@ from TaxiFareModel.data import clean_data
 from memoized_property import memoized_property
 import mlflow
 from mlflow.tracking import MlflowClient
+import joblib
 
 MLFLOW_URI = "https://mlflow.lewagon.co/"
 EXPERIMENT_NAME = "[UK] [London] [ADWilk19] TaxiFareModel 1.0"
@@ -84,6 +85,11 @@ class Trainer():
     def mlflow_log_metric(self, key, value):
         self.mlflow_client.log_metric(self.mlflow_run.info.run_id, key, value)
 
+    def save_model(self):
+        """ Save the trained model into a model.joblib file """
+        return joblib.dump(self.pipeline, 'model.joblib')
+
+
 if __name__ == "__main__":
     # get data
     df = get_data()
@@ -104,4 +110,5 @@ if __name__ == "__main__":
     # evaluate
     rmse = trainer.evaluate(X_test, y_test)
     print(rmse)
-    # store the data in a DataFrame
+    # save the model
+    save_model()
