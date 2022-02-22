@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/alexwilkinson/code/ADWilk19/TaxiFareModel/mlruns/1/08f166be9c72411fafe71da2e74afc30/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '1'
+lifecycle_stage: active
+name: ''
+run_id: 08f166be9c72411fafe71da2e74afc30
+run_uuid: 08f166be9c72411fafe71da2e74afc30
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1645543292248
+status: 1
+tags: []
+user_id: unknown
