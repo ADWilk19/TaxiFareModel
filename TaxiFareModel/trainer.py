@@ -87,7 +87,7 @@ class Trainer():
 
     def save_model(self):
         """ Save the trained model into a model.joblib file """
-        return joblib.dump(self.pipeline, 'model.joblib')
+        joblib.dump(self.pipeline, 'model.joblib')
 
 
 if __name__ == "__main__":
@@ -111,4 +111,4 @@ if __name__ == "__main__":
     rmse = trainer.evaluate(X_test, y_test)
     print(rmse)
     # save the model
-    save_model()
+    joblib.dump(self.pipeline, 'model.joblib')
